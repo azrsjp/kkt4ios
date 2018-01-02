@@ -76,9 +76,9 @@
 			children = (
 				7170BBA51FFB4D3C00B3B900 /* kkt4ios */,
 				7170BBBA1FFB4D3D00B3B900 /* kkt4iosTests */,
-				7170BBA41FFB4D3C00B3B900 /* Products */,
-				CFE4CC8574B0F7762EFF9506 /* Pods */,
 				610B2C778F87B8B51982D72B /* Frameworks */,
+				CFE4CC8574B0F7762EFF9506 /* Pods */,
+				7170BBA41FFB4D3C00B3B900 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,10 +94,9 @@
 		7170BBA51FFB4D3C00B3B900 /* kkt4ios */ = {
 			isa = PBXGroup;
 			children = (
-				7170BBA61FFB4D3C00B3B900 /* AppDelegate.swift */,
-				7170BBA81FFB4D3C00B3B900 /* ViewController.swift */,
-				7170BBAD1FFB4D3C00B3B900 /* Assets.xcassets */,
 				7170BBB21FFB4D3C00B3B900 /* Info.plist */,
+				71E815AE1FFBD01700C5FBBB /* resources */,
+				71E815AD1FFBD01000C5FBBB /* src */,
 			);
 			path = kkt4ios;
 			sourceTree = "<group>";
@@ -105,10 +104,27 @@
 		7170BBBA1FFB4D3D00B3B900 /* kkt4iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				7170BBBB1FFB4D3D00B3B900 /* kkt4iosTests.swift */,
 				7170BBBD1FFB4D3D00B3B900 /* Info.plist */,
+				7170BBBB1FFB4D3D00B3B900 /* kkt4iosTests.swift */,
 			);
 			path = kkt4iosTests;
+			sourceTree = "<group>";
+		};
+		71E815AD1FFBD01000C5FBBB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7170BBA61FFB4D3C00B3B900 /* AppDelegate.swift */,
+				7170BBA81FFB4D3C00B3B900 /* ViewController.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		71E815AE1FFBD01700C5FBBB /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				7170BBAD1FFB4D3C00B3B900 /* Assets.xcassets */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		CFE4CC8574B0F7762EFF9506 /* Pods */ = {
