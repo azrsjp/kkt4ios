@@ -38,6 +38,8 @@
 		71B153CB1FFC8FE40031D85E /* PagedViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153CA1FFC8FE40031D85E /* PagedViewControllerBase.swift */; };
 		71B153CD1FFCBAB60031D85E /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153CC1FFCBAB60031D85E /* PagingScrollView.swift */; };
 		71B153CF1FFCC1650031D85E /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153CE1FFCC1650031D85E /* DrawerViewController.swift */; };
+		71B153D11FFCDC6C0031D85E /* KatsuFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153D01FFCDC6C0031D85E /* KatsuFormViewController.swift */; };
+		71B153D31FFCDCA00031D85E /* KatsuFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B153D21FFCDCA00031D85E /* KatsuFormViewController.xib */; };
 		71B153D61FFCE1930031D85E /* SlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153D51FFCE1930031D85E /* SlideAnimator.swift */; };
 		E05628980DAEC331C9DEB4A9 /* Pods_kkt4ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC380D065558B2AFCECE80A /* Pods_kkt4ios.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +80,8 @@
 		71B153CA1FFC8FE40031D85E /* PagedViewControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedViewControllerBase.swift; sourceTree = "<group>"; };
 		71B153CC1FFCBAB60031D85E /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
 		71B153CE1FFCC1650031D85E /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		71B153D01FFCDC6C0031D85E /* KatsuFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatsuFormViewController.swift; sourceTree = "<group>"; };
+		71B153D21FFCDCA00031D85E /* KatsuFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KatsuFormViewController.xib; sourceTree = "<group>"; };
 		71B153D51FFCE1930031D85E /* SlideAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimator.swift; sourceTree = "<group>"; };
 		8712E67036F1DFA46E639F46 /* Pods-kkt4iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkt4iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kkt4iosTests/Pods-kkt4iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AC380D065558B2AFCECE80A /* Pods_kkt4ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kkt4ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +130,8 @@
 				71B153C81FFC8D0E0031D85E /* SearchViewController.swift */,
 				71B153CA1FFC8FE40031D85E /* PagedViewControllerBase.swift */,
 				71B153CE1FFCC1650031D85E /* DrawerViewController.swift */,
+				71B153D01FFCDC6C0031D85E /* KatsuFormViewController.swift */,
+				71B153D21FFCDCA00031D85E /* KatsuFormViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7170BBAE1FFB4D3C00B3B900 /* Images.xcassets in Resources */,
+				71B153D31FFCDCA00031D85E /* KatsuFormViewController.xib in Resources */,
 				71004BD61FFBD76700BECFCC /* Localizable.strings in Resources */,
 				71B153B61FFBDED50031D85E /* HeaderMenu.xib in Resources */,
 				71B153BA1FFC84940031D85E /* HomeViewController.xib in Resources */,
@@ -473,6 +480,7 @@
 				71B153C71FFC8CFD0031D85E /* LocalTimelineViewController.swift in Sources */,
 				71B153CD1FFCBAB60031D85E /* PagingScrollView.swift in Sources */,
 				71B153D61FFCE1930031D85E /* SlideAnimator.swift in Sources */,
+				71B153D11FFCDC6C0031D85E /* KatsuFormViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
