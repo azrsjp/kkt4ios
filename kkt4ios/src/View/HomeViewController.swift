@@ -44,7 +44,9 @@ class HomeViewController: BarPagerTabStripViewController {
     // MARK:- private
     
     private func onTapKatsu() {
-        print("Ai! Katsu!")
+        let katsuFormVC: UIViewController = KatsuFormViewController()
+
+        self.present(katsuFormVC, animated: true, completion: nil)
     }
     
     private func setupView() {
