@@ -28,7 +28,7 @@
                         <constraint firstAttribute="height" constant="70" id="78z-c5-gVY"/>
                     </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAk-2p-Zi2">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAk-2p-Zi2" customClass="PagingScrollView" customModule="kkt4ios" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9V-On-E3M" customClass="BarView" customModule="XLPagerTabStrip">
