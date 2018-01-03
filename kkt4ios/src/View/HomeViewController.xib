@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="barView" destination="T9V-On-E3M" id="WKR-Xh-edF"/>
                 <outlet property="containerView" destination="AAk-2p-Zi2" id="9az-2X-JuS"/>
+                <outlet property="headerMenu" destination="Iub-l1-Ky0" id="Cc6-od-kkA"/>
                 <outlet property="view" destination="iN0-l3-epB" id="sDM-8x-wA2"/>
             </connections>
         </placeholder>

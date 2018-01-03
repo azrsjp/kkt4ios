@@ -8,12 +8,24 @@
 
 import UIKit
 import XLPagerTabStrip
+import RxCocoa
+import RxSwift
 
 class HomeViewController: BarPagerTabStripViewController {
+    
+    @IBOutlet weak var headerMenu: HeaderMenu!
+
+    private let disposeBag = DisposeBag()
+    private let myTlVC = MyTimeLineViewController()
+    private let localTlVC = LocalTimelineViewController()
+    private let notiVC = NotificationViewController()
+    private let favVC = FavoriteViewController()
+    private let searchVC = SearchViewController()
 
     override func viewDidLoad() {
         self.configureButtonBarStyle()
         self.setupView()
+        self.registerHeaderMenuHandling()
 
         super.viewDidLoad()
     }
@@ -26,16 +38,14 @@ class HomeViewController: BarPagerTabStripViewController {
     // MARK: - PagerTabStripDataSource
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let myTlVC = MyTimeLineViewController()
-        let localTlVC = LocalTimelineViewController()
-        let notiVC = NotificationViewController()
-        let favVC = FavoriteViewController()
-        let searchVC = SearchViewController()
-
-        return [myTlVC, localTlVC, notiVC, favVC, searchVC]
+        return [self.myTlVC, self.localTlVC, self.notiVC, self.favVC, self.searchVC]
     }
 
     // MARK:- private
+    
+    private func onTapKatsu() {
+        print("Ai! Katsu!")
+    }
     
     private func setupView() {
         if let image = UIImage(named: "bg_main.png") {
@@ -47,5 +57,43 @@ class HomeViewController: BarPagerTabStripViewController {
         settings.style.barBackgroundColor = UIColor.yellow
         settings.style.selectedBarBackgroundColor = UIColor.blue
         settings.style.barHeight = 4
+    }
+    
+    private func registerHeaderMenuHandling() {
+        self.headerMenu.myTlButton
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.moveTo(viewController: self!.myTlVC, animated: true)
+            }).disposed(by: self.disposeBag)
+
+        self.headerMenu.localTlButton
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.moveTo(viewController: self!.localTlVC, animated: true)
+            }).disposed(by: self.disposeBag)
+
+        self.headerMenu.notiButton
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.moveTo(viewController: self!.notiVC, animated: true)
+            }).disposed(by: self.disposeBag)
+
+        self.headerMenu.favButton
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.moveTo(viewController: self!.favVC, animated: true)
+            }).disposed(by: self.disposeBag)
+
+        self.headerMenu.searchButton
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.moveTo(viewController: self!.searchVC, animated: true)
+            }).disposed(by: self.disposeBag)
+
+        self.headerMenu.katsuButton
+            .rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.onTapKatsu()
+            }).disposed(by: self.disposeBag)
     }
 }
