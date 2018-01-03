@@ -10,6 +10,13 @@ import Foundation
 import UIKit
 
 class HeaderMenu: UIView {
+    @IBOutlet weak var myTlButton: UIButton!;
+    @IBOutlet weak var localTlButton: UIButton!;
+    @IBOutlet weak var notiButton: UIButton!;
+    @IBOutlet weak var favButton: UIButton!;
+    @IBOutlet weak var searchButton: UIButton!;
+    @IBOutlet weak var katsuButton: UIButton!;
+    
     override init(frame: CGRect) {
         super.init(frame: frame);
         self.loadNib()
@@ -21,7 +28,7 @@ class HeaderMenu: UIView {
         self.loadNib()
         self.setupView()
     }
-    
+
     // MARK:- private
     
     private func loadNib(){
