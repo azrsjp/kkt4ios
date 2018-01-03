@@ -16,30 +16,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tl" translatesAutoresizingMaskIntoConstraints="NO" id="jP4-ve-bYV">
-                    <rect key="frame" x="105" y="27" width="31" height="28"/>
+                    <rect key="frame" x="105" y="27" width="30" height="28"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="28" id="6hY-kt-Ufh"/>
-                        <constraint firstAttribute="width" constant="31" id="egS-nc-qcv"/>
+                        <constraint firstAttribute="width" constant="30" id="egS-nc-qcv"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_reply" translatesAutoresizingMaskIntoConstraints="NO" id="noX-JH-uef">
-                    <rect key="frame" x="148" y="27" width="29" height="28"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_list" translatesAutoresizingMaskIntoConstraints="NO" id="noX-JH-uef">
+                    <rect key="frame" x="147" y="27" width="30" height="28"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="29" id="Cqg-W8-qB6"/>
+                        <constraint firstAttribute="width" constant="30" id="Cqg-W8-qB6"/>
                         <constraint firstAttribute="height" constant="28" id="aef-zg-cyM"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_favorite" translatesAutoresizingMaskIntoConstraints="NO" id="shI-DK-Yyi">
-                    <rect key="frame" x="189" y="27" width="29" height="28"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_reply" translatesAutoresizingMaskIntoConstraints="NO" id="shI-DK-Yyi">
+                    <rect key="frame" x="189" y="27" width="30" height="28"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="29" id="CUb-KC-rHW"/>
+                        <constraint firstAttribute="width" constant="30" id="CUb-KC-rHW"/>
                         <constraint firstAttribute="height" constant="28" id="s5K-RL-6FJ"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_list" translatesAutoresizingMaskIntoConstraints="NO" id="x6q-Kc-J4X">
-                    <rect key="frame" x="230" y="27" width="31" height="28"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_favorite" translatesAutoresizingMaskIntoConstraints="NO" id="x6q-Kc-J4X">
+                    <rect key="frame" x="231" y="27" width="30" height="28"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="31" id="6DA-7o-lmy"/>
+                        <constraint firstAttribute="width" constant="30" id="6DA-7o-lmy"/>
                         <constraint firstAttribute="height" constant="28" id="q5p-Gp-ssb"/>
                     </constraints>
                 </imageView>
@@ -59,7 +59,7 @@
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFD-Ne-Plf">
                     <rect key="frame" x="0.0" y="61" width="375" height="4"/>
-                    <color key="backgroundColor" red="0.92037726683937826" green="0.8100496477270096" blue="0.38808916511542924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.91946238279342651" green="0.81007760763168335" blue="0.3883453905582428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="4" id="g9J-df-vOu"/>
                     </constraints>
