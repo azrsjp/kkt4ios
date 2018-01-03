@@ -29,6 +29,7 @@
 		7170BBBC1FFB4D3D00B3B900 /* kkt4iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170BBBB1FFB4D3D00B3B900 /* kkt4iosTests.swift */; };
 		71B153B41FFBDEC50031D85E /* HeaderMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153B31FFBDEC50031D85E /* HeaderMenu.swift */; };
 		71B153B61FFBDED50031D85E /* HeaderMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B153B51FFBDED50031D85E /* HeaderMenu.xib */; };
+		71B153CB1FFC8FE40031D85E /* PagedViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153CA1FFC8FE40031D85E /* PagedViewControllerBase.swift */; };
 		E05628980DAEC331C9DEB4A9 /* Pods_kkt4ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC380D065558B2AFCECE80A /* Pods_kkt4ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		7170BBBD1FFB4D3D00B3B900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71B153B31FFBDEC50031D85E /* HeaderMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMenu.swift; sourceTree = "<group>"; };
 		71B153B51FFBDED50031D85E /* HeaderMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderMenu.xib; sourceTree = "<group>"; };
+		71B153CA1FFC8FE40031D85E /* PagedViewControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedViewControllerBase.swift; sourceTree = "<group>"; };
 		8712E67036F1DFA46E639F46 /* Pods-kkt4iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkt4iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kkt4iosTests/Pods-kkt4iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AC380D065558B2AFCECE80A /* Pods_kkt4ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kkt4ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59BDBE73AEC39C5D8B1A7D7 /* Pods_kkt4iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kkt4iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				7170BBA81FFB4D3C00B3B900 /* HomeViewController.swift */,
+				71B153CA1FFC8FE40031D85E /* PagedViewControllerBase.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -397,9 +400,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-kkt4ios/Pods-kkt4ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -414,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7170BBA91FFB4D3C00B3B900 /* HomeViewController.swift in Sources */,
+				71B153CB1FFC8FE40031D85E /* PagedViewControllerBase.swift in Sources */,
 				71B153B41FFBDEC50031D85E /* HeaderMenu.swift in Sources */,
 				7170BBA71FFB4D3C00B3B900 /* AppDelegate.swift in Sources */,
 			);
