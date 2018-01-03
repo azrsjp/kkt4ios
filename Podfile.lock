@@ -1,18 +1,25 @@
 PODS:
   - KYDrawerController (2.0.4)
+  - RxCocoa (4.1.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.0)
   - SwiftGen (5.2.1)
   - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
   - KYDrawerController (~> 2.0.4)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
   - SwiftGen (~> 5.2)
   - XLPagerTabStrip (~> 8.0)
 
 SPEC CHECKSUMS:
   KYDrawerController: cf5839877c442132123e9d482f458821026defdf
+  RxCocoa: cc1fec49cdc8fabe645964de7c51c099a36c2aa8
+  RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
   SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
   XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: 85d498fa598fcac0a343fcfe2f91d1fb838d2e98
+PODFILE CHECKSUM: 3fa6fb4c0aa15a8be4dc59acb142f32b05640633
 
 COCOAPODS: 1.3.1

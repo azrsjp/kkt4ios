@@ -9,6 +9,8 @@ target 'kkt4ios' do
   pod 'SwiftGen', '~> 5.2'
   pod 'XLPagerTabStrip', '~> 8.0'
   pod 'KYDrawerController', '~> 2.0.4'
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
 
   target 'kkt4iosTests' do
     inherit! :search_paths
