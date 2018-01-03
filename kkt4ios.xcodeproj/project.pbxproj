@@ -37,6 +37,7 @@
 		71B153C91FFC8D0E0031D85E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153C81FFC8D0E0031D85E /* SearchViewController.swift */; };
 		71B153CB1FFC8FE40031D85E /* PagedViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153CA1FFC8FE40031D85E /* PagedViewControllerBase.swift */; };
 		71B153CD1FFCBAB60031D85E /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153CC1FFCBAB60031D85E /* PagingScrollView.swift */; };
+		71B153CF1FFCC1650031D85E /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153CE1FFCC1650031D85E /* DrawerViewController.swift */; };
 		E05628980DAEC331C9DEB4A9 /* Pods_kkt4ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC380D065558B2AFCECE80A /* Pods_kkt4ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		71B153C81FFC8D0E0031D85E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		71B153CA1FFC8FE40031D85E /* PagedViewControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedViewControllerBase.swift; sourceTree = "<group>"; };
 		71B153CC1FFCBAB60031D85E /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
+		71B153CE1FFCC1650031D85E /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		8712E67036F1DFA46E639F46 /* Pods-kkt4iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkt4iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kkt4iosTests/Pods-kkt4iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AC380D065558B2AFCECE80A /* Pods_kkt4ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kkt4ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59BDBE73AEC39C5D8B1A7D7 /* Pods_kkt4iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kkt4iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 				71B153C61FFC8CFD0031D85E /* LocalTimelineViewController.swift */,
 				71B153C81FFC8D0E0031D85E /* SearchViewController.swift */,
 				71B153CA1FFC8FE40031D85E /* PagedViewControllerBase.swift */,
+				71B153CE1FFCC1650031D85E /* DrawerViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				71B153CB1FFC8FE40031D85E /* PagedViewControllerBase.swift in Sources */,
 				71B153C91FFC8D0E0031D85E /* SearchViewController.swift in Sources */,
 				71B153C51FFC8C9C0031D85E /* FavoriteViewController.swift in Sources */,
+				71B153CF1FFCC1650031D85E /* DrawerViewController.swift in Sources */,
 				71B153B41FFBDEC50031D85E /* HeaderMenu.swift in Sources */,
 				7170BBA71FFB4D3C00B3B900 /* AppDelegate.swift in Sources */,
 				71B153C11FFC8B700031D85E /* MyTimeLineViewController.swift in Sources */,
