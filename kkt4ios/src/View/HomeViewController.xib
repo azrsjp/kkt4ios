@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="kkt4ios" customModuleProvider="target">
+            <connections>
+                <outlet property="barView" destination="T9V-On-E3M" id="WKR-Xh-edF"/>
+                <outlet property="containerView" destination="AAk-2p-Zi2" id="9az-2X-JuS"/>
+                <outlet property="view" destination="iN0-l3-epB" id="sDM-8x-wA2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iub-l1-Ky0" customClass="HeaderMenu" customModule="kkt4ios" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="78z-c5-gVY"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAk-2p-Zi2">
+                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9V-On-E3M" customClass="BarView" customModule="XLPagerTabStrip">
+                    <rect key="frame" x="99" y="66" width="210" height="4"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="210" id="fJF-DH-Vdt"/>
+                        <constraint firstAttribute="height" constant="4" id="gfb-pN-mRc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="AAk-2p-Zi2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7Qc-5H-VJe"/>
+                <constraint firstItem="Iub-l1-Ky0" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="7yl-Lh-Y3P"/>
+                <constraint firstItem="AAk-2p-Zi2" firstAttribute="top" secondItem="Iub-l1-Ky0" secondAttribute="bottom" id="9No-0v-aEK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="T9V-On-E3M" secondAttribute="trailing" constant="66" id="Iji-NZ-hoo"/>
+                <constraint firstItem="AAk-2p-Zi2" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="JxJ-uP-pN5"/>
+                <constraint firstItem="Iub-l1-Ky0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Pka-N5-3JN"/>
+                <constraint firstItem="AAk-2p-Zi2" firstAttribute="top" secondItem="T9V-On-E3M" secondAttribute="bottom" id="TKf-qa-5kA"/>
+                <constraint firstItem="AAk-2p-Zi2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="wHz-Lv-s7c"/>
+                <constraint firstItem="Iub-l1-Ky0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="z2o-2z-v15"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-13.5" y="-318.5"/>
+        </view>
+    </objects>
+</document>
