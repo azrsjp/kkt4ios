@@ -42,6 +42,7 @@
 		71B153D11FFCDC6C0031D85E /* KatsuFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153D01FFCDC6C0031D85E /* KatsuFormViewController.swift */; };
 		71B153D31FFCDCA00031D85E /* KatsuFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B153D21FFCDCA00031D85E /* KatsuFormViewController.xib */; };
 		71B153D61FFCE1930031D85E /* SlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153D51FFCE1930031D85E /* SlideAnimator.swift */; };
+		71C5B4E92000AD5C00A3CA94 /* TimelineCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C5B4E82000AD5C00A3CA94 /* TimelineCellData.swift */; };
 		E05628980DAEC331C9DEB4A9 /* Pods_kkt4ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC380D065558B2AFCECE80A /* Pods_kkt4ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		71B153D01FFCDC6C0031D85E /* KatsuFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatsuFormViewController.swift; sourceTree = "<group>"; };
 		71B153D21FFCDCA00031D85E /* KatsuFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KatsuFormViewController.xib; sourceTree = "<group>"; };
 		71B153D51FFCE1930031D85E /* SlideAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimator.swift; sourceTree = "<group>"; };
+		71C5B4E82000AD5C00A3CA94 /* TimelineCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCellData.swift; sourceTree = "<group>"; };
 		8712E67036F1DFA46E639F46 /* Pods-kkt4iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkt4iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kkt4iosTests/Pods-kkt4iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AC380D065558B2AFCECE80A /* Pods_kkt4ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kkt4ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59BDBE73AEC39C5D8B1A7D7 /* Pods_kkt4iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kkt4iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,9 +198,18 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
+		71C5B4E52000A9FA00A3CA94 /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				71C5B4E82000AD5C00A3CA94 /* TimelineCellData.swift */,
+			);
+			path = ViewData;
+			sourceTree = "<group>";
+		};
 		71E815AD1FFBD01000C5FBBB /* src */ = {
 			isa = PBXGroup;
 			children = (
+				71C5B4E52000A9FA00A3CA94 /* ViewData */,
 				71B153B21FFBDE9E0031D85E /* UI */,
 				71004BD81FFBDBA000BECFCC /* View */,
 				71004BD71FFBD8E900BECFCC /* Constants */,
@@ -480,6 +491,7 @@
 				71B153B41FFBDEC50031D85E /* HeaderMenu.swift in Sources */,
 				7170BBA71FFB4D3C00B3B900 /* AppDelegate.swift in Sources */,
 				71B153C11FFC8B700031D85E /* MyTimeLineViewController.swift in Sources */,
+				71C5B4E92000AD5C00A3CA94 /* TimelineCellData.swift in Sources */,
 				71B153C71FFC8CFD0031D85E /* LocalTimelineViewController.swift in Sources */,
 				718AFDEC1FFD3B4C005A4F75 /* Reusable.swift in Sources */,
 				71B153CD1FFCBAB60031D85E /* PagingScrollView.swift in Sources */,
