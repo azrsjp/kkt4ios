@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,12 +28,23 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYn-s1-WoM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="346"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_header" translatesAutoresizingMaskIntoConstraints="NO" id="XAW-2p-v8m">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_header" translatesAutoresizingMaskIntoConstraints="NO" id="XAW-2p-v8m">
                                 <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Ypi-dg-ill"/>
                                     <constraint firstAttribute="width" constant="56" id="x9Y-QD-TRM"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.88456839320000002" green="0.7590644956" blue="0.31877222659999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-6y-yHG">
                                 <rect key="frame" x="68" y="0.0" width="252" height="346"/>
@@ -191,12 +203,32 @@
                                     <constraint firstAttribute="trailing" secondItem="Dwp-ME-Nqh" secondAttribute="trailing" constant="8" id="tdu-9J-9KH"/>
                                     <constraint firstAttribute="trailing" secondItem="jWG-Bn-dpq" secondAttribute="trailing" constant="8" id="ylI-Qw-gbR"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.88456839323043823" green="0.75906449556350708" blue="0.31877222657203674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balloon_edge" translatesAutoresizingMaskIntoConstraints="NO" id="prP-4o-vim">
+                                <rect key="frame" x="55" y="10" width="16" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="prP-4o-vim" secondAttribute="width" multiplier="1:1.2" id="Mim-nz-Lot"/>
+                                    <constraint firstAttribute="width" constant="16" id="e77-jO-w7U"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jAU-6y-yHG" firstAttribute="top" secondItem="iht-F4-Emu" secondAttribute="top" id="9Mt-Ri-t00"/>
                             <constraint firstItem="iht-F4-Emu" firstAttribute="trailing" secondItem="jAU-6y-yHG" secondAttribute="trailing" id="Ak1-XX-bdJ"/>
+                            <constraint firstItem="jAU-6y-yHG" firstAttribute="leading" secondItem="prP-4o-vim" secondAttribute="trailing" constant="-3" id="FNB-YG-VHK"/>
+                            <constraint firstItem="prP-4o-vim" firstAttribute="top" secondItem="iht-F4-Emu" secondAttribute="top" constant="10" id="Uqw-4U-mZu"/>
                             <constraint firstItem="XAW-2p-v8m" firstAttribute="top" secondItem="iht-F4-Emu" secondAttribute="top" id="acE-9R-0ka"/>
                             <constraint firstItem="XAW-2p-v8m" firstAttribute="leading" secondItem="CYn-s1-WoM" secondAttribute="leading" id="egd-04-qjd"/>
                             <constraint firstItem="iht-F4-Emu" firstAttribute="bottom" secondItem="jAU-6y-yHG" secondAttribute="bottom" id="qZv-wf-MAy"/>
@@ -228,10 +260,11 @@
                 <outlet property="userName" destination="jLd-hQ-ze5" id="HK8-dr-Hl9"/>
                 <outlet property="widthLayout" destination="vfZ-X1-YVK" id="yZD-AJ-EeF"/>
             </connections>
-            <point key="canvasLocation" x="-572" y="465"/>
+            <point key="canvasLocation" x="-826" y="313"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="balloon_edge" width="210" height="176"/>
         <image name="bg_header" width="93" height="139"/>
         <image name="icon_favorite" width="113" height="108"/>
         <image name="icon_katsu" width="207" height="146"/>
