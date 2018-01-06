@@ -29,6 +29,12 @@ class TimelineCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var imagesView: UIStackView!
     @IBOutlet weak var nsfwCoverView: UIButton!
     
+    // buttons
+    @IBOutlet weak var replyButton: UIButton!
+    @IBOutlet weak var boostButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var othersButton: UIButton!
+    
     // dynamic layout constraints
     @IBOutlet weak var widthLayout: NSLayoutConstraint!
 
