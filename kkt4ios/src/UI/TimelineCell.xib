@@ -265,7 +265,7 @@
     </objects>
     <resources>
         <image name="balloon_edge" width="210" height="176"/>
-        <image name="bg_header" width="93" height="139"/>
+        <image name="bg_header" width="22" height="32"/>
         <image name="icon_favorite" width="113" height="108"/>
         <image name="icon_katsu" width="207" height="146"/>
         <image name="icon_reply" width="106" height="103"/>
