@@ -30,7 +30,7 @@ class MyTimeLineViewController: PagedViewControllerBase {
         if let flowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
             flowLayout.sectionInset = UIEdgeInsetsMake(20, 15, 20, 15)
-            flowLayout.minimumLineSpacing = 20
+            flowLayout.minimumLineSpacing = 5
         }
         
         // MakeDummyData
