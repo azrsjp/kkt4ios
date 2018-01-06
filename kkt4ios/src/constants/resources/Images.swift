@@ -49,6 +49,10 @@ enum Asset {
   static let iconFavorite = ImageAsset(name: "icon_favorite")
   static let iconKatsu = ImageAsset(name: "icon_katsu")
   static let iconList = ImageAsset(name: "icon_list")
+  static let iconMiniBoost = ImageAsset(name: "icon_mini_boost")
+  static let iconMiniFavorite = ImageAsset(name: "icon_mini_favorite")
+  static let iconMiniOthers = ImageAsset(name: "icon_mini_others")
+  static let iconMiniReply = ImageAsset(name: "icon_mini_reply")
   static let iconReply = ImageAsset(name: "icon_reply")
   static let iconSearch = ImageAsset(name: "icon_search")
   static let iconTl = ImageAsset(name: "icon_tl")
@@ -62,6 +66,10 @@ enum Asset {
     iconFavorite,
     iconKatsu,
     iconList,
+    iconMiniBoost,
+    iconMiniFavorite,
+    iconMiniOthers,
+    iconMiniReply,
     iconReply,
     iconSearch,
     iconTl,
