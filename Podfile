@@ -11,6 +11,7 @@ target 'kkt4ios' do
   pod 'KYDrawerController', '~> 2.0.4'
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
+  pod 'MastodonKit', '~> 1.0'
 
   target 'kkt4iosTests' do
     inherit! :search_paths
