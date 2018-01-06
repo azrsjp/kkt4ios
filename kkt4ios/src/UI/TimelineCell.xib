@@ -159,10 +159,6 @@
                                                 </constraints>
                                                 <color key="tintColor" red="0.48241007328033447" green="0.36416429281234741" blue="0.29923766851425171" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_mini_others"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
-                                                        <color key="value" red="0.88456839320000002" green="0.7590644956" blue="0.31877222659999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="imageWithAspectFit" value="icon_mini_others"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
@@ -173,10 +169,6 @@
                                                 </constraints>
                                                 <color key="tintColor" red="0.48241007328033447" green="0.36416429281234741" blue="0.29923766851425171" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_mini_favorite"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
-                                                        <color key="value" red="0.88456839320000002" green="0.7590644956" blue="0.31877222659999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="imageWithAspectFit" value="icon_mini_favorite"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
@@ -187,10 +179,6 @@
                                                 </constraints>
                                                 <color key="tintColor" red="0.48241007328033447" green="0.36416429281234741" blue="0.29923766851425171" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_mini_boost"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
-                                                        <color key="value" red="0.88456839320000002" green="0.7590644956" blue="0.31877222659999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="imageWithAspectFit" value="icon_mini_boost"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
@@ -201,10 +189,6 @@
                                                 </constraints>
                                                 <color key="tintColor" red="0.48241007328033447" green="0.36416429281234741" blue="0.29923766851425171" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_mini_reply"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
-                                                        <color key="value" red="0.88456839320000002" green="0.7590644956" blue="0.31877222659999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="imageWithAspectFit" value="icon_mini_reply"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
