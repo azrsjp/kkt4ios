@@ -275,6 +275,7 @@
 				7170BBA11FFB4D3C00B3B900 /* Resources */,
 				F11D899F340F94D0036F629F /* [CP] Embed Pods Frameworks */,
 				6B547E07F5FD4BBFABD01A1C /* [CP] Copy Pods Resources */,
+				71B4D9A12001BF9B008B9BA7 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -442,6 +443,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "SWIFT_GEN=\"${SRCROOT}/Pods/SwiftGen/bin/swiftgen\"\n\nif which ${SWIFT_GEN} >/dev/null; then\n    ${SWIFT_GEN} xcassets -t swift4 ${SCRIPT_INPUT_FILE_0} --output ${SCRIPT_OUTPUT_FILE_0}\n    ${SWIFT_GEN} strings -t structured-swift4 ${SCRIPT_INPUT_FILE_1} --output ${SCRIPT_OUTPUT_FILE_1}\n    ${SWIFT_GEN} colors -t swift4 ${SCRIPT_INPUT_FILE_2} --output ${SCRIPT_OUTPUT_FILE_2}\nelse\n    echo \"warning: SwiftGen not installed.\"\nfi";
+		};
+		71B4D9A12001BF9B008B9BA7 /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SWIFTLINT=\"${PROJECT_DIR}/Pods/SwiftLint/swiftlint\"\n\nif which ${SWIFTLINT} >/dev/null; then\n    ${SWIFTLINT}\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		9FA4BACCBD1CEA51ED9492E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
