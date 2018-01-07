@@ -9,30 +9,30 @@
 import Foundation
 
 struct TimelineCellData {
-    let id: String;
-    let name: String;
-    let screenName: String;
-    let userId: String;
-    let iconUrl: URL?;
-    let text: String;
-    let cwText: String;
-    let mediaUrls: [URL];
-    let isNSFW: Bool;
-    let isFaved: Bool;
-    let isBoosted: Bool;
-    let date: TimeInterval;
+    let id: String
+    let name: String
+    let screenName: String
+    let userId: String
+    let iconUrl: URL?
+    let text: String
+    let cwText: String
+    let mediaUrls: [URL]
+    let isNSFW: Bool
+    let isFaved: Bool
+    let isBoosted: Bool
+    let date: TimeInterval
 
     var hasCwText: Bool {
-        get { return !self.cwText.isEmpty }
+        return !self.cwText.isEmpty
     }
     var hasMedia: Bool {
-        get { return !self.mediaUrls.isEmpty }
+        return !self.mediaUrls.isEmpty
     }
     
     static func genRandom() -> TimelineCellData {
-        let hasCwText = arc4random_uniform(2) == 0;
-        let hasMedia = arc4random_uniform(2) == 0;
-        let isNSFW = arc4random_uniform(2) == 0;
+        let hasCwText = arc4random_uniform(2) == 0
+        let hasMedia = arc4random_uniform(2) == 0
+        let isNSFW = arc4random_uniform(2) == 0
         
         return TimelineCellData(
             id: "id",

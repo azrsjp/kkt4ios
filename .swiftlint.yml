@@ -20,13 +20,14 @@ disabled_rules:
 #   - statement_position
     - shorthand_operator
     - todo
-#   - trailing_newline
+    - trailing_newline
 #   - trailing_semicolon
     - trailing_whitespace
     - type_body_length
     - type_name
     - variable_name
     - valid_docs
+    - multiple_closures_with_trailing_closure
 
 included:
     - kkt4ios

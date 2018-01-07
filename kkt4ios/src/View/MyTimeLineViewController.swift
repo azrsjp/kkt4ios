@@ -25,11 +25,12 @@ class MyTimeLineViewController: PagedViewControllerBase {
     // MARK: - private
     
     private func setupCollectionView() {
-        self.collectionView.register(UINib(nibName: "TimelineCell", bundle: nil), forCellWithReuseIdentifier: TimelineCell.reuseIdentifier)
+        self.collectionView.register(UINib(nibName: "TimelineCell", bundle: nil),
+                                     forCellWithReuseIdentifier: TimelineCell.reuseIdentifier)
         
         if let flowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
-            flowLayout.sectionInset = UIEdgeInsetsMake(20, 15, 20, 15)
+            flowLayout.sectionInset = UIEdgeInsets(top: 20, left: 15, bottom: 20, right: 15)
             flowLayout.minimumLineSpacing = 5
         }
         
@@ -52,7 +53,8 @@ extension MyTimeLineViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TimelineCell.reuseIdentifier, for: indexPath) as! TimelineCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TimelineCell.reuseIdentifier,
+                                                      for: indexPath) as! TimelineCell
         cell.setData(self.listData[indexPath.row])
 
         return cell

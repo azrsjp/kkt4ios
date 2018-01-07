@@ -41,7 +41,7 @@ class HomeViewController: BarPagerTabStripViewController {
         return [self.myTlVC, self.localTlVC, self.notiVC, self.favVC, self.searchVC]
     }
 
-    // MARK:- private
+    // MARK: - private
     
     private func onTapKatsu() {
         let katsuFormVC: UIViewController = KatsuFormViewController()

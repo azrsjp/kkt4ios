@@ -52,7 +52,7 @@ class TimelineCell: UICollectionViewCell, Reusable {
         self.setCellWidth(UIScreen.main.bounds.width)
     }
     
-    // MARK:- private
+    // MARK: - private
     
     func setData(_ data: TimelineCellData) {
         self.userName?.text = data.name

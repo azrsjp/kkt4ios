@@ -15,4 +15,3 @@ class DrawerViewController: PagedViewControllerBase {
         self.view.backgroundColor = UIColor.white
     }
 }
-

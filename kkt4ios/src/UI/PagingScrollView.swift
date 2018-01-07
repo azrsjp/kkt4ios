@@ -31,4 +31,3 @@ class PagingScrollView: UIScrollView, UIGestureRecognizerDelegate {
         return otherGestureRecognizer is UIScreenEdgePanGestureRecognizer
     }
 }
-
