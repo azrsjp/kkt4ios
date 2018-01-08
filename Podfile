@@ -14,6 +14,7 @@ target 'kkt4ios' do
   pod 'RxCocoa', '~> 4.0'
   pod 'MastodonKit', '~> 1.0'
   pod 'OAuthSwift', '~> 1.2.0'
+  pod 'SwiftyUserDefaults', '~>3.0.0'
 
   target 'kkt4iosTests' do
     inherit! :search_paths

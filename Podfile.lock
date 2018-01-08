@@ -7,6 +7,7 @@ PODS:
   - RxSwift (4.1.0)
   - SwiftGen (5.2.1)
   - SwiftLint (0.24.0)
+  - SwiftyUserDefaults (3.0.0)
   - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - RxSwift (~> 4.0)
   - SwiftGen (~> 5.2)
   - SwiftLint (~> 0.24.0)
+  - SwiftyUserDefaults (~> 3.0.0)
   - XLPagerTabStrip (~> 8.0)
 
 SPEC CHECKSUMS:
@@ -27,8 +29,9 @@ SPEC CHECKSUMS:
   RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
   SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
   SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
+  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: f8b3c5e59bd2c92e62e997278d5ff0767efc2170
+PODFILE CHECKSUM: 2a10e5ac1b97f16c43dc62d8aace5e1bbe631990
 
 COCOAPODS: 1.3.1
