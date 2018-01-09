@@ -16,13 +16,14 @@ struct Config {
     }
     
     struct Scheme {
-        static let base = "kkt4ios://"
-        static let login = base + "login"
+        static let scheme = "kkt4ios://"
+        static let login = "login"
+        static let loginURL = scheme + login
     }
 
     struct Auth {
         static let authorizeURL = App.kirakiratterURLBase + "oauth/authorize"
         static let accessTokenURL = App.kirakiratterURLBase + "oauth/token"
-        static let redirectURL = Scheme.login
+        static let redirectURL = Scheme.loginURL
     }
 }
