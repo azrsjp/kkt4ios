@@ -8,6 +8,7 @@
 
 import UIKit
 import KYDrawerController
+import OAuthSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +28,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = drawerController
         self.window?.makeKeyAndVisible()
 
+        return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+        print(url)
+        if let host = url.host, host == Config.Scheme.login {
+            OAuthSwift.handle(url: url)
+        }
         return true
     }
 
