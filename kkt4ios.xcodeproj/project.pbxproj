@@ -45,6 +45,7 @@
 		71B153D11FFCDC6C0031D85E /* KatsuFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153D01FFCDC6C0031D85E /* KatsuFormViewController.swift */; };
 		71B153D31FFCDCA00031D85E /* KatsuFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B153D21FFCDCA00031D85E /* KatsuFormViewController.xib */; };
 		71B153D61FFCE1930031D85E /* SlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153D51FFCE1930031D85E /* SlideAnimator.swift */; };
+		71B4D9A9200218ED008B9BA7 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9A8200218ED008B9BA7 /* DefaultsKeys.swift */; };
 		71B4D9AB200219F2008B9BA7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9AA200219F2008B9BA7 /* Config.swift */; };
 		71B4D9AF2004F3CE008B9BA7 /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9AE2004F3CE008B9BA7 /* OAuthClient.swift */; };
 		71B4D9B12004F3F6008B9BA7 /* MastodonAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9B02004F3F6008B9BA7 /* MastodonAPIClient.swift */; };
@@ -99,6 +100,7 @@
 		71B4D9A520021845008B9BA7 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		71B4D9A620021845008B9BA7 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		71B4D9A720021845008B9BA7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		71B4D9A8200218ED008B9BA7 /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		71B4D9AA200219F2008B9BA7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		71B4D9AE2004F3CE008B9BA7 /* OAuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthClient.swift; sourceTree = "<group>"; };
 		71B4D9B02004F3F6008B9BA7 /* MastodonAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastodonAPIClient.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		71B4D9AC20021A33008B9BA7 /* Defines */ = {
 			isa = PBXGroup;
 			children = (
+				71B4D9A8200218ED008B9BA7 /* DefaultsKeys.swift */,
 				71B4D9AA200219F2008B9BA7 /* Config.swift */,
 			);
 			path = Defines;
@@ -589,6 +592,7 @@
 				71C5B4E92000AD5C00A3CA94 /* TimelineCellData.swift in Sources */,
 				71B153C71FFC8CFD0031D85E /* LocalTimelineViewController.swift in Sources */,
 				71DBCC98200097BD007302DB /* UIButton+AspectFitImage.swift in Sources */,
+				71B4D9A9200218ED008B9BA7 /* DefaultsKeys.swift in Sources */,
 				718AFDEC1FFD3B4C005A4F75 /* Reusable.swift in Sources */,
 				71B153CD1FFCBAB60031D85E /* PagingScrollView.swift in Sources */,
 				71B153D61FFCE1930031D85E /* SlideAnimator.swift in Sources */,
