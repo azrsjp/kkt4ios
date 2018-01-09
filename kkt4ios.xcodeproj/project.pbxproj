@@ -47,6 +47,7 @@
 		71B153D61FFCE1930031D85E /* SlideAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B153D51FFCE1930031D85E /* SlideAnimator.swift */; };
 		71B4D9AB200219F2008B9BA7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9AA200219F2008B9BA7 /* Config.swift */; };
 		71B4D9AF2004F3CE008B9BA7 /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9AE2004F3CE008B9BA7 /* OAuthClient.swift */; };
+		71B4D9B12004F3F6008B9BA7 /* MastodonAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9B02004F3F6008B9BA7 /* MastodonAPIClient.swift */; };
 		71C5B4E92000AD5C00A3CA94 /* TimelineCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C5B4E82000AD5C00A3CA94 /* TimelineCellData.swift */; };
 		71C5B4EB2000C58400A3CA94 /* UIView+Bordered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C5B4EA2000C58400A3CA94 /* UIView+Bordered.swift */; };
 		71DBCC98200097BD007302DB /* UIButton+AspectFitImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBCC97200097BD007302DB /* UIButton+AspectFitImage.swift */; };
@@ -100,6 +101,7 @@
 		71B4D9A720021845008B9BA7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		71B4D9AA200219F2008B9BA7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		71B4D9AE2004F3CE008B9BA7 /* OAuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthClient.swift; sourceTree = "<group>"; };
+		71B4D9B02004F3F6008B9BA7 /* MastodonAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastodonAPIClient.swift; sourceTree = "<group>"; };
 		71C5B4E82000AD5C00A3CA94 /* TimelineCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCellData.swift; sourceTree = "<group>"; };
 		71C5B4EA2000C58400A3CA94 /* UIView+Bordered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Bordered.swift"; sourceTree = "<group>"; };
 		71DBCC97200097BD007302DB /* UIButton+AspectFitImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AspectFitImage.swift"; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				71B4D9AE2004F3CE008B9BA7 /* OAuthClient.swift */,
+				71B4D9B02004F3F6008B9BA7 /* MastodonAPIClient.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 			files = (
 				71B4D9AF2004F3CE008B9BA7 /* OAuthClient.swift in Sources */,
 				7170BBA91FFB4D3C00B3B900 /* HomeViewController.swift in Sources */,
+				71B4D9B12004F3F6008B9BA7 /* MastodonAPIClient.swift in Sources */,
 				71B153C31FFC8B850031D85E /* NotificationViewController.swift in Sources */,
 				71B153CB1FFC8FE40031D85E /* PagedViewControllerBase.swift in Sources */,
 				71B153C91FFC8D0E0031D85E /* SearchViewController.swift in Sources */,
