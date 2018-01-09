@@ -51,6 +51,9 @@
 		71B4D9B12004F3F6008B9BA7 /* MastodonAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9B02004F3F6008B9BA7 /* MastodonAPIClient.swift */; };
 		71B4D9B320051E12008B9BA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9B220051E12008B9BA7 /* LoginViewController.swift */; };
 		71B4D9B520051E5B008B9BA7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B4D9B420051E5B008B9BA7 /* LoginViewController.xib */; };
+		71B4D9B620051FA8008B9BA7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9A520021845008B9BA7 /* Strings.swift */; };
+		71B4D9B720051FAB008B9BA7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9A620021845008B9BA7 /* Images.swift */; };
+		71B4D9B820051FAE008B9BA7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9A720021845008B9BA7 /* Colors.swift */; };
 		71C5B4E92000AD5C00A3CA94 /* TimelineCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C5B4E82000AD5C00A3CA94 /* TimelineCellData.swift */; };
 		71C5B4EB2000C58400A3CA94 /* UIView+Bordered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C5B4EA2000C58400A3CA94 /* UIView+Bordered.swift */; };
 		71DBCC98200097BD007302DB /* UIButton+AspectFitImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBCC97200097BD007302DB /* UIButton+AspectFitImage.swift */; };
@@ -606,6 +609,9 @@
 				71B153D61FFCE1930031D85E /* SlideAnimator.swift in Sources */,
 				71B4D9AB200219F2008B9BA7 /* Config.swift in Sources */,
 				71B153D11FFCDC6C0031D85E /* KatsuFormViewController.swift in Sources */,
+				71B4D9B620051FA8008B9BA7 /* Strings.swift in Sources */,
+				71B4D9B720051FAB008B9BA7 /* Images.swift in Sources */,
+				71B4D9B820051FAE008B9BA7 /* Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
