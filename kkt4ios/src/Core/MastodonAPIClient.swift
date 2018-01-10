@@ -11,11 +11,10 @@ import MastodonKit
 import RxSwift
 
 final class MastodonAPIClient {
-    private let client: Client
-    
-    init(accessToken: String? = nil) {
-        self.client = Client(baseURL: Config.App.kirakiratterURLBase)
-        self.setAccessToken(accessToken)
+    static let shared = MastodonAPIClient()
+    private let client = Client(baseURL: Config.App.kirakiratterURLBase)
+
+    private init() {
     }
     
     func setAccessToken(_ accessToken: String?) {
