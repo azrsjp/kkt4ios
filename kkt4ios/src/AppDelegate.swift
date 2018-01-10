@@ -8,6 +8,7 @@
 
 import UIKit
 import OAuthSwift
+import SwiftyUserDefaults
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
-        self.window?.rootViewController = LoginViewController()
+        self.window?.rootViewController = firstViewController()
         self.window?.makeKeyAndVisible()
 
         return true
@@ -45,6 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+    }
+    
+    // MARK: - private
+
+    private func firstViewController() -> UIViewController {
+        let isAuthorized = Defaults[.accessToken] != nil
+
+        return isAuthorized ? HomeViewController.withDrawer() : LoginViewController()
     }
 }
 
