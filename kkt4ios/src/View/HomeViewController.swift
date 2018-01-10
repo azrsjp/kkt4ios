@@ -10,6 +10,7 @@ import UIKit
 import XLPagerTabStrip
 import RxCocoa
 import RxSwift
+import KYDrawerController
 
 class HomeViewController: BarPagerTabStripViewController {
     
@@ -21,6 +22,19 @@ class HomeViewController: BarPagerTabStripViewController {
     private let notiVC = NotificationViewController()
     private let favVC = FavoriteViewController()
     private let searchVC = SearchViewController()
+    
+    // MARK: - Static
+
+    static func withDrawer() -> UIViewController {
+        let withDraerVC = KYDrawerController(drawerDirection: .left, drawerWidth: 300)
+        let mainViewController = HomeViewController()
+        let drawerViewController = DrawerViewController()
+
+        withDraerVC.mainViewController = mainViewController
+        withDraerVC.drawerViewController = drawerViewController
+        
+        return withDraerVC
+    }
 
     override func viewDidLoad() {
         self.configureButtonBarStyle()
