@@ -10,9 +10,7 @@ import Foundation
 import SwiftyUserDefaults
 
 extension DefaultsKeys {
-    struct Auth {
-        static let clientSecret = DefaultsKey<String?>("clientSecret")
-        static let clientId = DefaultsKey<String?>("clientId")
-        static let accessToken = DefaultsKey<String?>("accessToken")
-    }
+    static let clientSecret = DefaultsKey<String?>("clientSecret")
+    static let clientId = DefaultsKey<String?>("clientId")
+    static let accessToken = DefaultsKey<String?>("accessToken")
 }
