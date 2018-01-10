@@ -17,8 +17,8 @@ final class OAuthClient {
     init() {
     }
     
-    func authorize(clientID: String, clientSecret: String) -> Single<String> {
-        self.createClient(clientID, clientSecret)
+    func authorize(clientID: String, clientSecret: String, from: UIViewController) -> Single<String> {
+        self.createClient(clientID, clientSecret, from)
 
         return Single<String>.create { [weak self] observer in
             guard let self_ = self else {
@@ -42,18 +42,22 @@ final class OAuthClient {
         }
     }
     
-    private func createClient(_ clientID: String, _ clientSecret: String) {
+    private func createClient(_ clientID: String, _ clientSecret: String, _ from: UIViewController) {
         guard self.oAuthClient == nil else {
             return
         }
 
-        self.oAuthClient = OAuth2Swift(
+        let client = OAuth2Swift(
             consumerKey: clientID,
             consumerSecret: clientSecret,
             authorizeUrl: Config.Auth.authorizeURL,
             accessTokenUrl: Config.Auth.accessTokenURL,
             responseType: "code"
         )
-        self.oAuthClient?.allowMissingStateCheck = true
+        self.oAuthClient?.cancel()
+
+        client.authorizeURLHandler = SafariURLHandler(viewController: from, oauthSwift: client)
+        client.allowMissingStateCheck = true
+        self.oAuthClient = client
     }
 }
