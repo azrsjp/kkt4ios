@@ -148,26 +148,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		71004BD81FFBDBA000BECFCC /* View */ = {
+		71004BD81FFBDBA000BECFCC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				71B153D41FFCE0F60031D85E /* Transition */,
-				7170BBA81FFB4D3C00B3B900 /* HomeViewController.swift */,
-				71B153B91FFC84940031D85E /* HomeViewController.xib */,
-				71B153C01FFC8B700031D85E /* MyTimeLineViewController.swift */,
-				718AFDE21FFD307C005A4F75 /* MyTimeLineViewController.xib */,
-				71B153C21FFC8B850031D85E /* NotificationViewController.swift */,
-				71B153C41FFC8C9C0031D85E /* FavoriteViewController.swift */,
-				71B153C61FFC8CFD0031D85E /* LocalTimelineViewController.swift */,
-				71B153C81FFC8D0E0031D85E /* SearchViewController.swift */,
-				71B153CA1FFC8FE40031D85E /* PagedViewControllerBase.swift */,
-				71B153CE1FFCC1650031D85E /* DrawerViewController.swift */,
-				71B153D01FFCDC6C0031D85E /* KatsuFormViewController.swift */,
-				71B153D21FFCDCA00031D85E /* KatsuFormViewController.xib */,
-				71B4D9B220051E12008B9BA7 /* LoginViewController.swift */,
-				71B4D9B420051E5B008B9BA7 /* LoginViewController.xib */,
+				71B4D9BC200907B9008B9BA7 /* ViewControllers */,
+				71B153B21FFBDE9E0031D85E /* UIComponents */,
+				71B153D41FFCE0F60031D85E /* Transitions */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7170BB9A1FFB4D3C00B3B900 = {
@@ -209,7 +197,7 @@
 			path = kkt4iosTests;
 			sourceTree = "<group>";
 		};
-		71B153B21FFBDE9E0031D85E /* UI */ = {
+		71B153B21FFBDE9E0031D85E /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
 				71C5B4EC2000C86800A3CA94 /* Extension */,
@@ -220,15 +208,15 @@
 				718AFDE71FFD35B8005A4F75 /* TimelineCell.xib */,
 				718AFDEB1FFD3B4C005A4F75 /* Reusable.swift */,
 			);
-			path = UI;
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
-		71B153D41FFCE0F60031D85E /* Transition */ = {
+		71B153D41FFCE0F60031D85E /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
 				71B153D51FFCE1930031D85E /* SlideAnimator.swift */,
 			);
-			path = Transition;
+			path = Transitions;
 			sourceTree = "<group>";
 		};
 		71B4D9A320021845008B9BA7 /* Constants */ = {
@@ -268,6 +256,27 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		71B4D9BC200907B9008B9BA7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7170BBA81FFB4D3C00B3B900 /* HomeViewController.swift */,
+				71B153B91FFC84940031D85E /* HomeViewController.xib */,
+				71B153C01FFC8B700031D85E /* MyTimeLineViewController.swift */,
+				718AFDE21FFD307C005A4F75 /* MyTimeLineViewController.xib */,
+				71B153C21FFC8B850031D85E /* NotificationViewController.swift */,
+				71B153C41FFC8C9C0031D85E /* FavoriteViewController.swift */,
+				71B153C61FFC8CFD0031D85E /* LocalTimelineViewController.swift */,
+				71B153C81FFC8D0E0031D85E /* SearchViewController.swift */,
+				71B153CA1FFC8FE40031D85E /* PagedViewControllerBase.swift */,
+				71B153CE1FFCC1650031D85E /* DrawerViewController.swift */,
+				71B153D01FFCDC6C0031D85E /* KatsuFormViewController.swift */,
+				71B153D21FFCDCA00031D85E /* KatsuFormViewController.xib */,
+				71B4D9B220051E12008B9BA7 /* LoginViewController.swift */,
+				71B4D9B420051E5B008B9BA7 /* LoginViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		71C5B4E52000A9FA00A3CA94 /* ViewData */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,8 +300,7 @@
 				71B4D9AD2004F3A7008B9BA7 /* Core */,
 				71B4D9A320021845008B9BA7 /* Constants */,
 				71C5B4E52000A9FA00A3CA94 /* ViewData */,
-				71B153B21FFBDE9E0031D85E /* UI */,
-				71004BD81FFBDBA000BECFCC /* View */,
+				71004BD81FFBDBA000BECFCC /* Views */,
 				7170BBA61FFB4D3C00B3B900 /* AppDelegate.swift */,
 			);
 			path = src;
