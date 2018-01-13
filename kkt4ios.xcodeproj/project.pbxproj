@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		22D552B3C4F8877E1A539B10 /* Pods_kkt4iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59BDBE73AEC39C5D8B1A7D7 /* Pods_kkt4iosTests.framework */; };
 		71004BD61FFBD76700BECFCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71004BD41FFBD76700BECFCC /* Localizable.strings */; };
+		7139C5342009328B002DDADE /* UIVIewController+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139C5332009328B002DDADE /* UIVIewController+LoadingView.swift */; };
 		7170BBA71FFB4D3C00B3B900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170BBA61FFB4D3C00B3B900 /* AppDelegate.swift */; };
 		7170BBA91FFB4D3C00B3B900 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170BBA81FFB4D3C00B3B900 /* HomeViewController.swift */; };
 		7170BBAE1FFB4D3C00B3B900 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7170BBAD1FFB4D3C00B3B900 /* Images.xcassets */; };
@@ -76,6 +77,7 @@
 		5C8311124B8868CE3F928C0D /* Pods-kkt4ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkt4ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kkt4ios/Pods-kkt4ios.debug.xcconfig"; sourceTree = "<group>"; };
 		71004BD41FFBD76700BECFCC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		71004BD51FFBD76700BECFCC /* Colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		7139C5332009328B002DDADE /* UIVIewController+LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+LoadingView.swift"; sourceTree = "<group>"; };
 		7170BBA31FFB4D3C00B3B900 /* kkt4ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kkt4ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7170BBA61FFB4D3C00B3B900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7170BBA81FFB4D3C00B3B900 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 				71B153D41FFCE0F60031D85E /* Transitions */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7139C5352009CEFA002DDADE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7139C5332009328B002DDADE /* UIVIewController+LoadingView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7170BB9A1FFB4D3C00B3B900 = {
@@ -259,6 +269,7 @@
 		71B4D9BC200907B9008B9BA7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7139C5352009CEFA002DDADE /* Extensions */,
 				7170BBA81FFB4D3C00B3B900 /* HomeViewController.swift */,
 				71B153B91FFC84940031D85E /* HomeViewController.xib */,
 				71B153C01FFC8B700031D85E /* MyTimeLineViewController.swift */,
@@ -624,6 +635,7 @@
 				71B4D9B620051FA8008B9BA7 /* Strings.swift in Sources */,
 				71B4D9B720051FAB008B9BA7 /* Images.swift in Sources */,
 				71B4D9B820051FAE008B9BA7 /* Colors.swift in Sources */,
+				7139C5342009328B002DDADE /* UIVIewController+LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
