@@ -15,7 +15,7 @@ target 'kkt4ios' do
   pod 'MastodonKit', '~> 1.0'
   pod 'OAuthSwift', '~> 1.2.0'
   pod 'SwiftyUserDefaults', '~>3.0.0'
-  pod 'KRProgressHUD',  '~>3.1.0'
+  pod 'NVActivityIndicatorView', '~>4.1.1'
 
   target 'kkt4iosTests' do
     inherit! :search_paths

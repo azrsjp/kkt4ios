@@ -9,16 +9,17 @@
 import Foundation
 import UIKit
 import RxCocoa
-import KRProgressHUD
+import NVActivityIndicatorView
 
 extension UIViewController {
     
     func showLoadingView() {
-        KRProgressHUD.show()
+        let activityData = ActivityData()
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
     }
     
     func hideLoadingView() {
-        KRProgressHUD.dismiss()
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
     
     var loadingView: Binder<Bool> {
