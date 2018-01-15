@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		22D552B3C4F8877E1A539B10 /* Pods_kkt4iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59BDBE73AEC39C5D8B1A7D7 /* Pods_kkt4iosTests.framework */; };
 		71004BD61FFBD76700BECFCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71004BD41FFBD76700BECFCC /* Localizable.strings */; };
+		7139C52F2009261C002DDADE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139C52E2009261C002DDADE /* LoginViewModel.swift */; };
 		7139C53220092A35002DDADE /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139C53120092A35002DDADE /* AuthModel.swift */; };
 		7139C5342009328B002DDADE /* UIVIewController+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139C5332009328B002DDADE /* UIVIewController+LoadingView.swift */; };
 		7139C538200A700F002DDADE /* RxSwift+asCompletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139C537200A700F002DDADE /* RxSwift+asCompletable.swift */; };
@@ -79,6 +80,7 @@
 		5C8311124B8868CE3F928C0D /* Pods-kkt4ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkt4ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kkt4ios/Pods-kkt4ios.debug.xcconfig"; sourceTree = "<group>"; };
 		71004BD41FFBD76700BECFCC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		71004BD51FFBD76700BECFCC /* Colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		7139C52E2009261C002DDADE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7139C53120092A35002DDADE /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		7139C5332009328B002DDADE /* UIVIewController+LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+LoadingView.swift"; sourceTree = "<group>"; };
 		7139C537200A700F002DDADE /* RxSwift+asCompletable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+asCompletable.swift"; sourceTree = "<group>"; };
@@ -162,6 +164,14 @@
 				71B153D41FFCE0F60031D85E /* Transitions */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7139C52D200925FC002DDADE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7139C52E2009261C002DDADE /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		7139C53020092A12002DDADE /* Models */ = {
@@ -330,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				7139C53020092A12002DDADE /* Models */,
+				7139C52D200925FC002DDADE /* ViewModels */,
 				71B4D9AD2004F3A7008B9BA7 /* Core */,
 				71B4D9A320021845008B9BA7 /* Constants */,
 				71C5B4E52000A9FA00A3CA94 /* ViewData */,
@@ -639,6 +650,7 @@
 				71B153CB1FFC8FE40031D85E /* PagedViewControllerBase.swift in Sources */,
 				71B153C91FFC8D0E0031D85E /* SearchViewController.swift in Sources */,
 				71B153C51FFC8C9C0031D85E /* FavoriteViewController.swift in Sources */,
+				7139C52F2009261C002DDADE /* LoginViewModel.swift in Sources */,
 				71B153CF1FFCC1650031D85E /* DrawerViewController.swift in Sources */,
 				71B153B41FFBDEC50031D85E /* HeaderMenu.swift in Sources */,
 				7170BBA71FFB4D3C00B3B900 /* AppDelegate.swift in Sources */,
