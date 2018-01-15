@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 import RxCocoa
 import RxSwift
-import KRProgressHUD
 import SwiftyUserDefaults
+import MastodonKit
 
 class LoginViewController: UIViewController {
     
@@ -20,69 +20,46 @@ class LoginViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private var registerDisposable: Disposable?
     private var oAuthClient: OAuthClient?
+    private let loginViewModel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setupView()
-
-        self.loginButton
-            .rx.tap
-            .subscribe (onNext: {[unowned self] in self.login() })
-            .disposed(by: self.disposeBag)
+        
+        self.bindData()
+        
+        self.bindUIEvents()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.loginViewModel.viewWillDisapper()
     }
     
     // MARK: - private
-
-    private func login() {
-        KRProgressHUD.show()
-
-        self.registerDisposable?.dispose()
-
-        self.registerDisposable
-            = MastodonAPIClient.shared.registerClient()
-            .do (onNext: {[unowned self] app in
-                self.recordClientInfo(clientID: app.clientID, clientSecret: app.clientSecret)
-            })
-            .flatMap { [unowned self] app in
-                KRProgressHUD.dismiss()
-                return self.authorize(clientID: app.clientID, clientSecret: app.clientSecret)
-            }
-            .do (onNext: {[unowned self] token in
-                self.recordAccessToken(accessToken: token)
-            })
-            .subscribe(onSuccess: {[unowned self] token in
-                KRProgressHUD.dismiss()
-                MastodonAPIClient.shared.setAccessToken(token)
-
-                self.moveToHomeVC()
-            }, onError: { _  in
-                KRProgressHUD.dismiss()
-            })
-
-        self.registerDisposable?.disposed(by: self.disposeBag)
-    }
-    
-    private func authorize(clientID: String, clientSecret: String) -> Single<String> {
-        let client = OAuthClient()
-        self.oAuthClient = client // To work correctly, retain instance
-
-        return client.authorize(clientID: clientID, clientSecret: clientSecret, from: self)
-    }
-    
-    private func recordClientInfo(clientID: String, clientSecret: String) {
-        Defaults[.clientId] = clientID
-        Defaults[.clientSecret] = clientSecret
-    }
-    
-    private func recordAccessToken(accessToken: String) {
-        Defaults[.accessToken] = accessToken
-    }
     
     private func setupView() {
         if let image = UIImage(asset: Asset.bgMain) {
             self.view.backgroundColor = UIColor(patternImage: image)
         }
+    }
+    
+    private func bindData() {
+        self.loginViewModel.outputs
+            .isLoading
+            .asDriver()
+            .drive(self.loadingView)
+            .disposed(by: self.disposeBag)
+    }
+    
+    private func bindUIEvents() {
+        self.loginButton
+            .rx.tap
+            .asDriver()
+            .drive(onNext: {[unowned self] in
+                self.loginViewModel.login(from: self)
+            })
+            .disposed(by: self.disposeBag)
     }
     
     private func moveToHomeVC() {
