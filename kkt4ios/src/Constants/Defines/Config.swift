@@ -9,12 +9,12 @@
 import Foundation
 
 struct Config {
-    
+
     struct App {
         static let clientName = "Kirakiratter for iOS"
         static let kirakiratterURLBase = "https://kirakiratter.com/"
     }
-    
+
     struct Scheme {
         static let scheme = "kkt4ios://"
         static let login = "login"

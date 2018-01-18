@@ -12,17 +12,17 @@ import UIKit
 @IBDesignable
 extension UIView {
     @IBInspectable var borderWidth: CGFloat {
-        get { return self.layer.borderWidth }
-        set { self.layer.borderWidth = newValue }
+        get { return layer.borderWidth }
+        set { layer.borderWidth = newValue }
     }
-    
+
     @IBInspectable var borderColor: UIColor {
-        get { return UIColor.init(cgColor: self.layer.borderColor ?? UIColor.clear.cgColor) }
-        set { self.layer.borderColor = newValue.cgColor }
+        get { return UIColor(cgColor: layer.borderColor ?? UIColor.clear.cgColor) }
+        set { layer.borderColor = newValue.cgColor }
     }
-    
+
     @IBInspectable var cornerRadius: CGFloat {
-        get { return self.layer.cornerRadius }
-        set { self.layer.cornerRadius = newValue }
+        get { return layer.cornerRadius }
+        set { layer.cornerRadius = newValue }
     }
 }

@@ -28,39 +28,39 @@ class LoginViewModel: LoginViewModelType, LoginViewModelInputs, LoginViewModelOu
 
     var inputs: LoginViewModelInputs { return self }
     var outputs: LoginViewModelOutputs { return self }
-    
+
     private let authModel = AuthModel()
     private let disposeBag = DisposeBag()
 
     init() {
     }
-    
+
     // MARK: - outputs
-    
+
     var isLoading = BehaviorRelay<Bool>(value: false)
-    
+
     var moveToHome = PublishSubject<Void>()
-    
+
     // MARK: - inputs
-    
+
     func viewWillDisapper() {
-        self.isLoading.accept(false)
+        isLoading.accept(false)
     }
-    
+
     func login(from: UIViewController) {
-        self.isLoading.accept(true)
+        isLoading.accept(true)
 
         // delaySubscriptionを使う理由
         // ローディングが一瞬で終わるパターンがあり，不自然な画面のチラツキが発生するため，良い感じに多少遅延させる
-        self.authModel
+        authModel
             .login(fromVC: from)
             .delaySubscription(RxTimeInterval(0.3), scheduler: MainScheduler.instance)
-            .subscribe(onCompleted: {[unowned self] in
+            .subscribe(onCompleted: { [unowned self] in
                 self.isLoading.accept(false)
                 self.moveToHome.onNext(())
-            }, onError: {[unowned self] error in
+            }, onError: { [unowned self] error in
                 self.isLoading.accept(false)
                 print(error)
-            }).disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
     }
 }

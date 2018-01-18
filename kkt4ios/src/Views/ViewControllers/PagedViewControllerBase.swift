@@ -11,13 +11,12 @@ import UIKit
 import XLPagerTabStrip
 
 class PagedViewControllerBase: UIViewController, IndicatorInfoProvider {
-    
+
     private var itemInfo: IndicatorInfo = ""
-    
+
     // MARK: - IndicatorInfoProvider
-    
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+
+    func indicatorInfo(for _: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }
 }
-

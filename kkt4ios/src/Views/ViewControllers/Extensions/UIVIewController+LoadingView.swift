@@ -7,23 +7,23 @@
 //
 
 import Foundation
-import UIKit
-import RxCocoa
 import NVActivityIndicatorView
+import RxCocoa
+import UIKit
 
 extension UIViewController {
-    
+
     func showLoadingView() {
         let activityData = ActivityData()
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
     }
-    
+
     func hideLoadingView() {
         NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
-    
+
     var loadingView: Binder<Bool> {
-        return Binder(self) {(vc, value: Bool) in
+        return Binder(self) { (vc, value: Bool) in
             value ? vc.showLoadingView() : vc.hideLoadingView()
         }
     }

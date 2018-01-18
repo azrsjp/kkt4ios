@@ -6,26 +6,26 @@
 //  Copyright © 2018年 gomachan_7. All rights reserved.
 //
 
-import UIKit
 import OAuthSwift
 import SwiftyUserDefaults
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+    func application(_: UIApplication,
+                     didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
 
-        self.window?.rootViewController = firstViewController()
-        self.window?.makeKeyAndVisible()
+        window?.rootViewController = firstViewController()
+        window?.makeKeyAndVisible()
 
         return true
     }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+
+    func application(_: UIApplication, open url: URL, options _: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
         print(url)
         if let host = url.host, host == Config.Scheme.login {
             OAuthSwift.handle(url: url)
@@ -33,21 +33,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {
+    func applicationWillResignActive(_: UIApplication) {
     }
 
-    func applicationDidEnterBackground(_ application: UIApplication) {
+    func applicationDidEnterBackground(_: UIApplication) {
     }
 
-    func applicationWillEnterForeground(_ application: UIApplication) {
+    func applicationWillEnterForeground(_: UIApplication) {
     }
 
-    func applicationDidBecomeActive(_ application: UIApplication) {
+    func applicationDidBecomeActive(_: UIApplication) {
     }
 
-    func applicationWillTerminate(_ application: UIApplication) {
+    func applicationWillTerminate(_: UIApplication) {
     }
-    
+
     // MARK: - private
 
     private func firstViewController() -> UIViewController {
@@ -56,4 +56,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return isAuthorized ? HomeViewController.withDrawer() : LoginViewController()
     }
 }
-

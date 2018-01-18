@@ -13,18 +13,18 @@ import UIKit
 extension UIButton {
 
     @IBInspectable var imageWithAspectFit: UIImage? {
-        get { return self.image(for: UIControlState.normal) }
+        get { return image(for: UIControlState.normal) }
         set {
-            self.setImage(newValue, for: UIControlState.normal)
-            self.configureImageAspect()
+            setImage(newValue, for: UIControlState.normal)
+            configureImageAspect()
         }
     }
-    
+
     // MARK: - private
-    
+
     private func configureImageAspect() {
-        self.imageView?.contentMode = .scaleAspectFit
-        self.contentHorizontalAlignment = .fill
-        self.contentVerticalAlignment = .fill
+        imageView?.contentMode = .scaleAspectFit
+        contentHorizontalAlignment = .fill
+        contentVerticalAlignment = .fill
     }
 }

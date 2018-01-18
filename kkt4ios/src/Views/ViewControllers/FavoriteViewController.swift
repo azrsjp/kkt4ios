@@ -15,4 +15,3 @@ class FavoriteViewController: PagedViewControllerBase {
         super.viewDidLoad()
     }
 }
-

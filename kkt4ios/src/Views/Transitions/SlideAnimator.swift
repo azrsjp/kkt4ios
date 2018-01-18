@@ -14,33 +14,33 @@ let moveDistance: CGFloat = 70.0
 
 class PresentSlideAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    func transitionDuration(using _: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
-    
+
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let fromView = transitionContext
             .viewController(forKey: UITransitionContextViewControllerKey.from)?.view else {
-                return
+            return
         }
         guard let toView = transitionContext
             .viewController(forKey: UITransitionContextViewControllerKey.to)?.view else {
-                return
+            return
         }
-        
+
         let containerView = transitionContext.containerView
         containerView.insertSubview(toView, aboveSubview: fromView)
-        
+
         toView.frame = containerView.frame
         toView.frame.origin = CGPoint(x: containerView.frame.size.width, y: 0)
-        
+
         UIView.animate(withDuration: transitionDuration(using: transitionContext),
                        delay: 0,
                        options: [.curveEaseIn, .curveEaseOut],
                        animations: { () -> Void in
-            fromView.frame = fromView.frame.offsetBy(dx: -moveDistance, dy: 0)
-            fromView.alpha = 0.7
-            toView.frame = containerView.frame
+                           fromView.frame = fromView.frame.offsetBy(dx: -moveDistance, dy: 0)
+                           fromView.alpha = 0.7
+                           toView.frame = containerView.frame
         }) { _ -> Void in
             fromView.frame = fromView.frame.offsetBy(dx: -moveDistance, dy: 0)
             transitionContext.completeTransition(true)
@@ -49,32 +49,32 @@ class PresentSlideAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 }
 
 class DismissSlideAnimator: NSObject, UIViewControllerAnimatedTransitioning {
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    func transitionDuration(using _: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
-    
+
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let fromView = transitionContext
             .viewController(forKey: UITransitionContextViewControllerKey.from)?.view else {
-                return
+            return
         }
         guard let toView = transitionContext
             .viewController(forKey: UITransitionContextViewControllerKey.to)?.view else {
-                return
+            return
         }
-        
+
         let containerView = transitionContext.containerView
         containerView.insertSubview(toView, belowSubview: fromView)
-        
+
         toView.frame = toView.frame.offsetBy(dx: moveDistance, dy: 0)
-        
+
         UIView.animate(withDuration: transitionDuration(using: transitionContext),
                        delay: 0,
                        options: [.curveEaseIn, .curveEaseOut],
                        animations: { () -> Void in
-            fromView.frame = fromView.frame.offsetBy(dx: containerView.frame.size.width, dy: 0)
-            toView.frame = toView.frame.offsetBy(dx: moveDistance, dy: 0)
-            toView.alpha = 1.0
+                           fromView.frame = fromView.frame.offsetBy(dx: containerView.frame.size.width, dy: 0)
+                           toView.frame = toView.frame.offsetBy(dx: moveDistance, dy: 0)
+                           toView.alpha = 1.0
         }) { _ -> Void in
             transitionContext.completeTransition(true)
         }

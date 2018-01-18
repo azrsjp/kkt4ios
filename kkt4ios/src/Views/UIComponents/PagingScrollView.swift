@@ -15,18 +15,18 @@ class PagingScrollView: UIScrollView, UIGestureRecognizerDelegate {
         super.init(frame: frame)
         super.panGestureRecognizer.delegate = self
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         super.panGestureRecognizer.delegate = self
     }
-    
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+
+    func gestureRecognizer(_: UIGestureRecognizer,
                            shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return otherGestureRecognizer is UIScreenEdgePanGestureRecognizer
     }
-    
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+
+    func gestureRecognizer(_: UIGestureRecognizer,
                            shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return otherGestureRecognizer is UIScreenEdgePanGestureRecognizer
     }

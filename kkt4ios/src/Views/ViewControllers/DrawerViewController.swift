@@ -12,6 +12,6 @@ import XLPagerTabStrip
 class DrawerViewController: PagedViewControllerBase {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.white
     }
 }

@@ -16,9 +16,9 @@ final class MastodonAPIClient {
 
     private init() {
     }
-    
+
     func setAccessToken(_ accessToken: String?) {
-        self.client.accessToken = accessToken
+        client.accessToken = accessToken
     }
 
     func registerClient() -> Single<ClientApplication> {
@@ -38,7 +38,7 @@ final class MastodonAPIClient {
                 return Disposables.create()
             }
 
-            self_.client.run(request) {(response, error) in
+            self_.client.run(request) { response, error in
                 guard let response = response else {
                     observer(.error(error ?? ClientError.dataError))
                     return

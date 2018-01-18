@@ -6,15 +6,15 @@
 //  Copyright © 2018年 gomachan_7. All rights reserved.
 //
 
-import UIKit
-import XLPagerTabStrip
+import KYDrawerController
 import RxCocoa
 import RxSwift
-import KYDrawerController
+import UIKit
+import XLPagerTabStrip
 
 class HomeViewController: BarPagerTabStripViewController {
-    
-    @IBOutlet weak var headerMenu: HeaderMenu!
+
+    @IBOutlet var headerMenu: HeaderMenu!
 
     private let disposeBag = DisposeBag()
     private let myTlVC = MyTimeLineViewController()
@@ -22,7 +22,7 @@ class HomeViewController: BarPagerTabStripViewController {
     private let notiVC = NotificationViewController()
     private let favVC = FavoriteViewController()
     private let searchVC = SearchViewController()
-    
+
     // MARK: - Static
 
     static func withDrawer() -> UIViewController {
@@ -32,14 +32,14 @@ class HomeViewController: BarPagerTabStripViewController {
 
         withDraerVC.mainViewController = mainViewController
         withDraerVC.drawerViewController = drawerViewController
-        
+
         return withDraerVC
     }
 
     override func viewDidLoad() {
-        self.configureButtonBarStyle()
-        self.setupView()
-        self.registerHeaderMenuHandling()
+        configureButtonBarStyle()
+        setupView()
+        registerHeaderMenuHandling()
 
         super.viewDidLoad()
     }
@@ -48,68 +48,68 @@ class HomeViewController: BarPagerTabStripViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     // MARK: - PagerTabStripDataSource
-    
-    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+
+    override func viewControllers(for _: PagerTabStripViewController) -> [UIViewController] {
         return [self.myTlVC, self.localTlVC, self.notiVC, self.favVC, self.searchVC]
     }
 
     // MARK: - private
-    
+
     private func onTapKatsu() {
         let katsuFormVC: UIViewController = KatsuFormViewController()
 
-        self.present(katsuFormVC, animated: true, completion: nil)
+        present(katsuFormVC, animated: true, completion: nil)
     }
-    
+
     private func setupView() {
         if let image = UIImage(named: "bg_main.png") {
-            self.view.backgroundColor = UIColor(patternImage: image)
+            view.backgroundColor = UIColor(patternImage: image)
         }
     }
-    
+
     private func configureButtonBarStyle() {
         settings.style.barBackgroundColor = UIColor.yellow
         settings.style.selectedBarBackgroundColor = UIColor.blue
         settings.style.barHeight = 4
     }
-    
+
     private func registerHeaderMenuHandling() {
-        self.headerMenu.myTlButton
+        headerMenu.myTlButton
             .rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.moveTo(viewController: self!.myTlVC, animated: true)
-            }).disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
 
-        self.headerMenu.localTlButton
+        headerMenu.localTlButton
             .rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.moveTo(viewController: self!.localTlVC, animated: true)
-            }).disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
 
-        self.headerMenu.notiButton
+        headerMenu.notiButton
             .rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.moveTo(viewController: self!.notiVC, animated: true)
-            }).disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
 
-        self.headerMenu.favButton
+        headerMenu.favButton
             .rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.moveTo(viewController: self!.favVC, animated: true)
-            }).disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
 
-        self.headerMenu.searchButton
+        headerMenu.searchButton
             .rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.moveTo(viewController: self!.searchVC, animated: true)
-            }).disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
 
-        self.headerMenu.katsuButton
+        headerMenu.katsuButton
             .rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.onTapKatsu()
-            }).disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
     }
 }

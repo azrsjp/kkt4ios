@@ -23,17 +23,18 @@ struct TimelineCellData {
     let date: TimeInterval
 
     var hasCwText: Bool {
-        return !self.cwText.isEmpty
+        return !cwText.isEmpty
     }
+
     var hasMedia: Bool {
-        return !self.mediaUrls.isEmpty
+        return !mediaUrls.isEmpty
     }
-    
+
     static func genRandom() -> TimelineCellData {
         let hasCwText = arc4random_uniform(2) == 0
         let hasMedia = arc4random_uniform(2) == 0
         let isNSFW = arc4random_uniform(2) == 0
-        
+
         return TimelineCellData(
             id: "id",
             name: "七倉小春",
@@ -50,4 +51,3 @@ struct TimelineCellData {
         )
     }
 }
-

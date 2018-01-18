@@ -13,12 +13,12 @@ import RxSwift
 final class OAuthClient {
 
     private var oAuthClient: OAuth2Swift?
-    
+
     init() {
     }
-    
+
     func authorize(clientID: String, clientSecret: String, from: UIViewController) -> Single<String> {
-        self.createClient(clientID, clientSecret, from)
+        createClient(clientID, clientSecret, from)
 
         return Single<String>.create { [weak self] observer in
             guard let self_ = self else {
@@ -34,16 +34,16 @@ final class OAuthClient {
                     dump(response)
                     dump(parameters)
                     observer(.success(credential.oauthToken))
-            }, failure: { error in
-                observer(.error(error))
+                }, failure: { error in
+                    observer(.error(error))
             })
 
             return Disposables.create()
         }
     }
-    
+
     private func createClient(_ clientID: String, _ clientSecret: String, _ from: UIViewController) {
-        guard self.oAuthClient == nil else {
+        guard oAuthClient == nil else {
             return
         }
 
@@ -54,10 +54,10 @@ final class OAuthClient {
             accessTokenUrl: Config.Auth.accessTokenURL,
             responseType: "code"
         )
-        self.oAuthClient?.cancel()
+        oAuthClient?.cancel()
 
         client.authorizeURLHandler = SafariURLHandler(viewController: from, oauthSwift: client)
         client.allowMissingStateCheck = true
-        self.oAuthClient = client
+        oAuthClient = client
     }
 }
