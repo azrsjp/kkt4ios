@@ -8,6 +8,7 @@ PODS:
   - RxCocoa (4.1.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.1.0)
+  - SwiftFormat/CLI (0.32.1)
   - SwiftGen (5.2.1)
   - SwiftLint (0.24.0)
   - SwiftyUserDefaults (3.0.0)
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - OAuthSwift (~> 1.2.0)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
+  - SwiftFormat/CLI
   - SwiftGen (~> 5.2)
   - SwiftLint (~> 0.24.0)
   - SwiftyUserDefaults (~> 3.0.0)
@@ -32,11 +34,12 @@ SPEC CHECKSUMS:
   OAuthSwift: 7fd6855b8e4d58eb5a30d156ea9bed7a8aecd1ca
   RxCocoa: cc1fec49cdc8fabe645964de7c51c099a36c2aa8
   RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
+  SwiftFormat: 80e535fe247ca30c81790d1fe1bc779e8b5de20a
   SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
   SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: dc766d9528c687ccdae49aaf1c4e1811ca417631
+PODFILE CHECKSUM: 7548c05fed8328c6555fd7b288c44dadc5142dd5
 
 COCOAPODS: 1.3.1

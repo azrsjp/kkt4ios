@@ -18,6 +18,17 @@
 			name = "Run SwiftGen";
 			productName = "Run SwiftGen";
 		};
+		714FEAD52010DABA00547348 /* Run SwiftFormat */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 714FEAD82010DABA00547348 /* Build configuration list for PBXAggregateTarget "Run SwiftFormat" */;
+			buildPhases = (
+				714FEAD92010DABE00547348 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Run SwiftFormat";
+			productName = "Run SwiftFormat";
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -430,6 +441,10 @@
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
+					714FEAD52010DABA00547348 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					7170BBA21FFB4D3C00B3B900 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -457,6 +472,7 @@
 				7170BBA21FFB4D3C00B3B900 /* kkt4ios */,
 				7170BBB61FFB4D3D00B3B900 /* kkt4iosTests */,
 				71004BCB1FFBD5A900BECFCC /* Run SwiftGen */,
+				714FEAD52010DABA00547348 /* Run SwiftFormat */,
 			);
 		};
 /* End PBXProject section */
@@ -553,6 +569,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "SWIFT_GEN=\"${SRCROOT}/Pods/SwiftGen/bin/swiftgen\"\n\nif which ${SWIFT_GEN} >/dev/null; then\n    ${SWIFT_GEN} xcassets -t swift4 ${SCRIPT_INPUT_FILE_0} --output ${SCRIPT_OUTPUT_FILE_0}\n    ${SWIFT_GEN} strings -t structured-swift4 ${SCRIPT_INPUT_FILE_1} --output ${SCRIPT_OUTPUT_FILE_1}\n    ${SWIFT_GEN} colors -t swift4 ${SCRIPT_INPUT_FILE_2} --output ${SCRIPT_OUTPUT_FILE_2}\nelse\n    echo \"warning: SwiftGen not installed.\"\nfi";
+		};
+		714FEAD92010DABE00547348 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SWIFT_FORMAT=\"${SRCROOT}/Pods/SwiftFormat/CommandLineTool/swiftformat\"\n\nif which ${SWIFT_FORMAT} >/dev/null; then\n${SWIFT_FORMAT} .\nelse\necho \"warning: Format not installed.\"\nfi\n";
 		};
 		71B4D9A12001BF9B008B9BA7 /* Run Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -701,6 +730,22 @@
 			name = Debug;
 		};
 		71004BCE1FFBD5A900BECFCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		714FEAD62010DABA00547348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		714FEAD72010DABA00547348 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -891,6 +936,15 @@
 			buildConfigurations = (
 				71004BCD1FFBD5A900BECFCC /* Debug */,
 				71004BCE1FFBD5A900BECFCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		714FEAD82010DABA00547348 /* Build configuration list for PBXAggregateTarget "Run SwiftFormat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				714FEAD62010DABA00547348 /* Debug */,
+				714FEAD72010DABA00547348 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

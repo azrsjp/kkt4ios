@@ -7,6 +7,7 @@ target 'kkt4ios' do
 
   # Pods for kkt4ios
   pod 'SwiftLint', '~> 0.24.0'
+  pod 'SwiftFormat/CLI'
   pod 'SwiftGen', '~> 5.2'
   pod 'XLPagerTabStrip', '~> 8.0'
   pod 'KYDrawerController', '~> 2.0.4'
