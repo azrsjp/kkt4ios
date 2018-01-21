@@ -12,6 +12,7 @@ import RxCocoa
 import RxSwift
 import SwiftyUserDefaults
 import UIKit
+import WebKit
 
 class AuthModel {
     private var oAuthClient: OAuthClient?
@@ -30,9 +31,17 @@ class AuthModel {
     func logout() {
         // TODO: token自体を無効にしたい
         Defaults[.accessToken] = nil
+
+        // ログイン状態が残ったままOauthのWebViewを出しても即座にtokenが発行されてしまうため，Cookieを消して明示的に再ログインさせる
+        let dataTypes = Set([
+            WKWebsiteDataTypeCookies,
+            WKWebsiteDataTypeLocalStorage, WKWebsiteDataTypeSessionStorage,
+            WKWebsiteDataTypeWebSQLDatabases, WKWebsiteDataTypeIndexedDBDatabases,
+        ])
+        WKWebsiteDataStore.default().removeData(ofTypes: dataTypes, modifiedSince: NSDate.distantPast, completionHandler: {})
     }
 
-    func login(fromVC: UIViewController) -> Completable {
+    func login(with authWebView: AuthWebViewController) -> Completable {
         // Tokenを取得済み = ログイン済み
         if isLoggedIn(),
             let token = Defaults[.accessToken] {
@@ -47,7 +56,7 @@ class AuthModel {
 
             return doOAuth(clientID: clientId,
                            clientSecret: clientSecret,
-                           from: fromVC)
+                           authWebView: authWebView)
                 .do(onNext: { token in
                     MastodonAPIClient.shared.setAccessToken(token)
                 })
@@ -59,7 +68,7 @@ class AuthModel {
             .flatMap { [unowned self] in
                 self.doOAuth(clientID: $0.clientID,
                              clientSecret: $0.clientSecret,
-                             from: fromVC)
+                             authWebView: authWebView)
             }
             .do(onNext: { token in
                 MastodonAPIClient.shared.setAccessToken(token)
@@ -82,11 +91,11 @@ class AuthModel {
             })
     }
 
-    private func doOAuth(clientID: String, clientSecret: String, from: UIViewController) -> Single<String> {
+    private func doOAuth(clientID: String, clientSecret: String, authWebView: AuthWebViewController) -> Single<String> {
         let client = OAuthClient()
         oAuthClient = client // To work correctly, retain instance
 
-        return client.authorize(clientID: clientID, clientSecret: clientSecret, from: from)
+        return client.authorize(clientID: clientID, clientSecret: clientSecret, authWebView: authWebView)
             .do(onNext: { [unowned self] token in
                 self.storeAccessToken(accessToken: token)
                 MastodonAPIClient.shared.setAccessToken(token)

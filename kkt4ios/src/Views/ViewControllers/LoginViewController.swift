@@ -8,12 +8,13 @@
 
 import Foundation
 import MastodonKit
+import OAuthSwift
 import RxCocoa
 import RxSwift
 import SwiftyUserDefaults
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, AuthWebViewControllerDelegate {
 
     @IBOutlet var loginButton: UIButton!
 
@@ -30,6 +31,14 @@ class LoginViewController: UIViewController {
         bindData()
 
         bindUIEvents()
+    }
+
+    // MARK: - AuthWebViewControllerDelegate
+
+    func authViewControllerWillDisappear(_: AuthWebViewController, isCanceled: Bool) {
+        if !isCanceled {
+            showLoadingView()
+        }
     }
 
     override func viewWillDisappear(_: Bool) {
@@ -50,6 +59,13 @@ class LoginViewController: UIViewController {
             .asDriver()
             .drive(loadingView)
             .disposed(by: disposeBag)
+
+        loginViewModel.outputs
+            .moveToHome
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [unowned self] in
+                self.moveToHomeVC()
+            }).disposed(by: disposeBag)
     }
 
     private func bindUIEvents() {
@@ -57,7 +73,7 @@ class LoginViewController: UIViewController {
             .rx.tap
             .asDriver()
             .drive(onNext: { [unowned self] in
-                self.loginViewModel.login(from: self)
+                self.launchAuthWebView()
             })
             .disposed(by: disposeBag)
     }
@@ -66,5 +82,12 @@ class LoginViewController: UIViewController {
         let homeVC = HomeViewController.withDrawer()
 
         UIApplication.shared.keyWindow?.rootViewController = homeVC
+    }
+    
+    private func launchAuthWebView() {
+        let authWebViewVC = AuthWebViewController()
+        authWebViewVC.authWebVCDelegate = self
+        
+        self.loginViewModel.login(with: authWebViewVC)
     }
 }

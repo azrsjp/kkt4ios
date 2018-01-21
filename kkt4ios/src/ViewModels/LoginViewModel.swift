@@ -11,12 +11,13 @@ import RxCocoa
 import RxSwift
 
 protocol LoginViewModelInputs {
-    func login(from: UIViewController)
+    func login(with webView: AuthWebViewController)
     func viewWillDisapper()
 }
 
 protocol LoginViewModelOutputs {
     var isLoading: BehaviorRelay<Bool> { get }
+    var moveToHome: PublishSubject<Void> { get }
 }
 
 protocol LoginViewModelType {
@@ -47,16 +48,15 @@ class LoginViewModel: LoginViewModelType, LoginViewModelInputs, LoginViewModelOu
         isLoading.accept(false)
     }
 
-    func login(from: UIViewController) {
+    func login(with webView: AuthWebViewController) {
         isLoading.accept(true)
 
         // delaySubscriptionを使う理由
         // ローディングが一瞬で終わるパターンがあり，不自然な画面のチラツキが発生するため，良い感じに多少遅延させる
         authModel
-            .login(fromVC: from)
+            .login(with: webView)
             .delaySubscription(RxTimeInterval(0.3), scheduler: MainScheduler.instance)
             .subscribe(onCompleted: { [unowned self] in
-                self.isLoading.accept(false)
                 self.moveToHome.onNext(())
             }, onError: { [unowned self] error in
                 self.isLoading.accept(false)

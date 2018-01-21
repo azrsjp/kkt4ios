@@ -9,6 +9,7 @@
 import Foundation
 import OAuthSwift
 import RxSwift
+import SafariServices
 
 final class OAuthClient {
 
@@ -17,8 +18,8 @@ final class OAuthClient {
     init() {
     }
 
-    func authorize(clientID: String, clientSecret: String, from: UIViewController) -> Single<String> {
-        createClient(clientID, clientSecret, from)
+    func authorize(clientID: String, clientSecret: String, authWebView: AuthWebViewController) -> Single<String> {
+        createClient(clientID, clientSecret, authWebView)
 
         return Single<String>.create { [weak self] observer in
             guard let self_ = self else {
@@ -42,7 +43,7 @@ final class OAuthClient {
         }
     }
 
-    private func createClient(_ clientID: String, _ clientSecret: String, _ from: UIViewController) {
+    private func createClient(_ clientID: String, _ clientSecret: String, _ authWebView: AuthWebViewController) {
         guard oAuthClient == nil else {
             return
         }
@@ -56,7 +57,7 @@ final class OAuthClient {
         )
         oAuthClient?.cancel()
 
-        client.authorizeURLHandler = SafariURLHandler(viewController: from, oauthSwift: client)
+        client.authorizeURLHandler = authWebView
         client.allowMissingStateCheck = true
         oAuthClient = client
     }
