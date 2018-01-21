@@ -34,6 +34,7 @@
 /* Begin PBXBuildFile section */
 		22D552B3C4F8877E1A539B10 /* Pods_kkt4iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59BDBE73AEC39C5D8B1A7D7 /* Pods_kkt4iosTests.framework */; };
 		71004BD61FFBD76700BECFCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71004BD41FFBD76700BECFCC /* Localizable.strings */; };
+		7116AEDC2014C33200A1E4E0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116AEDB2014C33200A1E4E0 /* Utility.swift */; };
 		7139C52F2009261C002DDADE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139C52E2009261C002DDADE /* LoginViewModel.swift */; };
 		7139C53220092A35002DDADE /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139C53120092A35002DDADE /* AuthModel.swift */; };
 		7139C5342009328B002DDADE /* UIVIewController+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139C5332009328B002DDADE /* UIVIewController+LoadingView.swift */; };
@@ -93,6 +94,7 @@
 		5C8311124B8868CE3F928C0D /* Pods-kkt4ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkt4ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kkt4ios/Pods-kkt4ios.debug.xcconfig"; sourceTree = "<group>"; };
 		71004BD41FFBD76700BECFCC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		71004BD51FFBD76700BECFCC /* Colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		7116AEDB2014C33200A1E4E0 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		7139C52E2009261C002DDADE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7139C53120092A35002DDADE /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		7139C5332009328B002DDADE /* UIVIewController+LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+LoadingView.swift"; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				7139C536200A6FE9002DDADE /* Extensions */,
 				71B4D9AE2004F3CE008B9BA7 /* OAuthClient.swift */,
 				71B4D9B02004F3F6008B9BA7 /* MastodonAPIClient.swift */,
+				7116AEDB2014C33200A1E4E0 /* Utility.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				7139C52F2009261C002DDADE /* LoginViewModel.swift in Sources */,
 				71B153CF1FFCC1650031D85E /* DrawerViewController.swift in Sources */,
 				71B153B41FFBDEC50031D85E /* HeaderMenu.swift in Sources */,
+				7116AEDC2014C33200A1E4E0 /* Utility.swift in Sources */,
 				7170BBA71FFB4D3C00B3B900 /* AppDelegate.swift in Sources */,
 				71C5B4EB2000C58400A3CA94 /* UIView+Bordered.swift in Sources */,
 				718AFDE61FFD35AD005A4F75 /* TimelineCell.swift in Sources */,
