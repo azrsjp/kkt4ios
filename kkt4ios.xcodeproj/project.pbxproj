@@ -69,6 +69,7 @@
 		71B4D9B620051FA8008B9BA7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9A520021845008B9BA7 /* Strings.swift */; };
 		71B4D9B720051FAB008B9BA7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9A620021845008B9BA7 /* Images.swift */; };
 		71B4D9B820051FAE008B9BA7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4D9A720021845008B9BA7 /* Colors.swift */; };
+		71B627EB2010EE16007749A5 /* DrawerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B627EA2010EE16007749A5 /* DrawerViewModel.swift */; };
 		71C5B4E92000AD5C00A3CA94 /* TimelineCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C5B4E82000AD5C00A3CA94 /* TimelineCellData.swift */; };
 		71C5B4EB2000C58400A3CA94 /* UIView+Bordered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C5B4EA2000C58400A3CA94 /* UIView+Bordered.swift */; };
 		71DBCC98200097BD007302DB /* UIButton+AspectFitImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBCC97200097BD007302DB /* UIButton+AspectFitImage.swift */; };
@@ -130,6 +131,7 @@
 		71B4D9B02004F3F6008B9BA7 /* MastodonAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastodonAPIClient.swift; sourceTree = "<group>"; };
 		71B4D9B220051E12008B9BA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		71B4D9B420051E5B008B9BA7 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		71B627EA2010EE16007749A5 /* DrawerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewModel.swift; sourceTree = "<group>"; };
 		71C5B4E82000AD5C00A3CA94 /* TimelineCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCellData.swift; sourceTree = "<group>"; };
 		71C5B4EA2000C58400A3CA94 /* UIView+Bordered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Bordered.swift"; sourceTree = "<group>"; };
 		71DBCC97200097BD007302DB /* UIButton+AspectFitImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AspectFitImage.swift"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				7139C52E2009261C002DDADE /* LoginViewModel.swift */,
+				71B627EA2010EE16007749A5 /* DrawerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 				718AFDE61FFD35AD005A4F75 /* TimelineCell.swift in Sources */,
 				71B153C11FFC8B700031D85E /* MyTimeLineViewController.swift in Sources */,
 				71C5B4E92000AD5C00A3CA94 /* TimelineCellData.swift in Sources */,
+				71B627EB2010EE16007749A5 /* DrawerViewModel.swift in Sources */,
 				71B153C71FFC8CFD0031D85E /* LocalTimelineViewController.swift in Sources */,
 				71DBCC98200097BD007302DB /* UIButton+AspectFitImage.swift in Sources */,
 				71B4D9A9200218ED008B9BA7 /* DefaultsKeys.swift in Sources */,
